@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title:'BBANTO',
       home:Grade(),
     );
@@ -37,7 +38,12 @@ class Grade extends StatelessWidget {
               radius: 60.0,
             ),
           ),
-          
+          Divider(
+            height: 60.0,
+            color:Colors.grey[800],
+            thickness: 0.6,
+            endIndent: 30.0,
+          ),
             Text('Name',
             style: TextStyle(
               color:Colors.white,
@@ -123,6 +129,15 @@ class Grade extends StatelessWidget {
                 ),
                 ),
               ],
+              ),
+              Center(
+                child: CircleAvatar(
+                  backgroundImage:AssetImage('assets/lion2.png'),
+                  radius:40.0,
+                  backgroundColor: Colors.amber[800],
+                
+
+                ), 
               ),
           ],
         ),
